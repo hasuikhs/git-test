@@ -28,6 +28,8 @@
       // 즉, 다른 branch에서 add 와 commit을 한 후에
       // 다시 master branch로 checkout
       git merge <branch name>
+      
+      // 충돌 발생시 해당 파일의 코드로 이동하여 해결 후 add와 commit
       ```
 
    4. ##### branch 삭제하기
