@@ -22,3 +22,19 @@
       ```
 
    3. ##### branch 병합하기
+
+      ```
+      // 다른 branch로 checkout 된 상태에서 
+      // 즉, 다른 branch에서 add 와 commit을 한 후에
+      // 다시 master branch로 checkout
+      git merge <branch name>
+      ```
+
+   4. ##### branch 삭제하기
+
+      ```
+      // 다른 branch의 내용이 모두 master로 통합되었기에 필요하지가 않다
+      git branch -d <branch name>
+      ```
+
+      
