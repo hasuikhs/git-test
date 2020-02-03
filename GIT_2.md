@@ -24,12 +24,20 @@
 ### 1.3 branch 병합하기
 
    ```bash
-   // 다른 branch로 checkout 된 상태에서 
-   // 즉, 다른 branch에서 add 와 commit을 한 후에
-   // 다시 master branch로 checkout
-   $ git merge <branch name>
+// 다른 branch로 checkout 된 상태에서 
+// 즉, 다른 branch에서 add 와 commit을 한 후에
+// 다시 master branch로 checkout
+$ git merge <branch name>
    
-   // 충돌 발생시 해당 파일의 코드로 이동하여 해결 후 add와 commit
+// 충돌 발생시 해당 파일의 코드로 이동하여 해결 후 add와 commit
+$ git status
+
+// 상태를 찍으면 충돌난 파일이 보여진다
+<<<<<<< HEAD
+// 현재 체크 아웃된 내용
+=========
+// 병합하려는 대상인 내용
+>>>>>>> master
    ```
 
 ### 1.4 branch 삭제하기
