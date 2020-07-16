@@ -9,16 +9,16 @@
 ### 1.1 branch 만들기
 
    ```bash
-   $ git branch <branch name>
+$ git branch <branch name>
    ```
 
 ### 1.2 branch 전환하기
 
    ```bash
-   $ git checkout <branch name>
+$ git checkout <branch name>
    
-   // 브랜치 만들기와 체크아웃을 한번에 하는 방법
-   $ git checkout -b <branch name>
+// 브랜치 만들기와 체크아웃을 한번에 하는 방법
+$ git checkout -b <branch name>
    ```
 
 ### 1.3 branch 병합하기
@@ -43,8 +43,8 @@ $ git status
 ### 1.4 branch 삭제하기
 
    ```bash
-   // 다른 branch의 내용이 모두 master로 통합되었기에 필요하지가 않다
-   $ git branch -d <branch name>
+// 다른 branch의 내용이 모두 master로 통합되었기에 필요하지가 않다
+$ git branch -d <branch name>
    ```
 
 
@@ -93,4 +93,49 @@ $ git status
        $ git gc --aggressive --prune=now
        ```
 
-       
+
+## 3. git 취소하기
+
+### 3.1 git add 취소하기
+
+```bash
+$ git reset Head [file]	# 파일명
+
+$ git reset Head		# 파일명이 없으면 add 전체 취소
+```
+
+### 3.2 git commit 취소하기
+
+- commit 목록 확인
+
+  ```bash
+  $ git log
+  ```
+
+- commit을 취소하고 해당 파일들은 staged 상태로 워킹 디렉토리에 보존
+
+  ```bash
+  $ git reset --soft HEAD^
+  ```
+
+- commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉토리에 보존
+
+  ```bash
+  $ git reset --mixed HEAD^	# 기본 옵션
+  
+  $ git reset HEAD^			# 기본 옵션
+  
+  $ git reset HEAD~2			# 마지막 2개의 commit을 취소
+  ```
+
+- commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉토리에서 삭제
+
+  ```bash
+  $ git reset --hard HEAD^
+  ```
+
+- commt message 변경하기
+
+  ```bash
+  $ git commit --amend
+  ```
