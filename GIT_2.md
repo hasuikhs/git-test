@@ -94,7 +94,7 @@ $ git branch -d <branch name>
        ```
 
 
-## 3. git 취소하기
+## 3. git 변경과 취소
 
 ### 3.1 git add 취소하기
 
@@ -104,7 +104,15 @@ $ git reset Head [file]	# 파일명
 $ git reset Head		# 파일명이 없으면 add 전체 취소
 ```
 
-### 3.2 git commit 취소하기
+### 3.2 git commit 수정하기
+
+- --amend 옵션으로 마지막 커밋 수정
+
+```bash
+$ git commit --amend -m "new commit comment"
+```
+
+### 3.3 git commit 취소하기
 
 - commit 목록 확인
 
