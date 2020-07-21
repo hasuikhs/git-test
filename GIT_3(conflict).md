@@ -108,8 +108,10 @@
 
 - test1 branch는 conflict가 나지 않아 계속 자신의 branch를 이어가 자신의 위치를 계속 가져감
 
-- test2 branch는 conflict가 났으므로 자신의 로컬 소스를 버리고 stage에서 다시 clone하고 branch를 overwrite하여 사용
+- test2 
 
+  - 방법1 : test2 branch는 conflict가 났으므로 자신의 로컬 소스를 버리고 stage에서 다시 clone하고 branch를 overwrite하여 사용
+  
   ```bash
   $ cd ..
   
@@ -121,7 +123,17 @@
   
   (stage)$ git branch test2
   
+(stage)$ git checkout test2
+  ```
+  
+  - 방법2 : stage로 scope를 옮긴 상태에서 자신의 브랜치를 버리고 새로 이름이 같은 브랜치를 생성하여 사용
+  
+  ```bash
+  (stage)$ git branch -D test2
+  
+  (stage)$ git branch test2
+  
   (stage)$ git checkout test2
   ```
-
+  
   
