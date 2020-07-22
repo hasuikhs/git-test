@@ -123,17 +123,17 @@
   
   (stage)$ git branch test2
   
-(stage)$ git checkout test2
+  (stage)$ git checkout test2
   ```
   
   - 방법2 : stage로 scope를 옮긴 상태에서 자신의 브랜치를 버리고 새로 이름이 같은 브랜치를 생성하여 사용
   
   ```bash
   (stage)$ git branch -D test2
-  
+    
   (stage)$ git branch test2
-  
+    
   (stage)$ git checkout test2
   ```
-  
+
   
