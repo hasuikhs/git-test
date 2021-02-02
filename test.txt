@@ -9,5 +9,3 @@ github test
 git test commit1
 
 git test commit2
-
-git test commit3
