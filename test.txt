@@ -6,6 +6,12 @@ test1-1-1 update from test2
 
 github test 
 
-git test commit1
+test commit1 
 
-git test commit2
+squash test1
+
+squash test2
+
+squash test3
+
+squash test4
