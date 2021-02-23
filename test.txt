@@ -9,3 +9,7 @@ github test
 test commit1 
 
 squash test1
+
+squash test2
+
+squash test3
