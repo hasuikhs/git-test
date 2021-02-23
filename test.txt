@@ -7,3 +7,5 @@ test1-1-1 update from test2
 github test 
 
 test commit1 
+
+squash test1
