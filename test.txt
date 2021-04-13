@@ -16,4 +16,4 @@ git flow_test2
 
 git flow_test3
 
-gut flow_test4
+git flow_test4
