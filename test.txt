@@ -10,12 +10,4 @@ test commit1
 
 git compare test
 
-git flow_test1
-
-git flow_test2
-
-git flow_test3
-
-git flow_test4
-
-git flow test5
+git flow test
