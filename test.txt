@@ -11,3 +11,5 @@ test commit1
 git compare test
 
 git flow_test1
+
+git flow_test2
