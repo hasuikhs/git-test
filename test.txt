@@ -1,13 +1,1 @@
-test1
-
-test1-1
-
-test1-1-1 update from test2
-
-github test 
-
-test commit1 
-
-git compare test
-
-git flow hotfix
+git rebase test1
