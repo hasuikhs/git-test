@@ -1,7 +1,7 @@
-test1
+git rebase test1
 
-test1-1
+git rebase test2
 
-test1-1-1 update from test2
+git rebase test3
 
-github test 
+git rebase test4

@@ -17,33 +17,33 @@ $ git branch <branch name>
    ```bash
 $ git checkout <branch name>
    
-// 브랜치 만들기와 체크아웃을 한번에 하는 방법
+# 브랜치 만들기와 체크아웃을 한번에 하는 방법
 $ git checkout -b <branch name>
    ```
 
 ### 1.3 branch 병합하기
 
    ```bash
-// 다른 branch로 checkout 된 상태에서 
-// 즉, 다른 branch에서 add 와 commit을 한 후에
-// 다시 master branch로 checkout
+# 다른 branch로 checkout 된 상태에서 
+# 즉, 다른 branch에서 add 와 commit을 한 후에
+# 다시 master branch로 checkout
 $ git merge <branch name>
    
-// 충돌 발생시 해당 파일의 코드로 이동하여 해결 후 add와 commit
+# 충돌 발생시 해당 파일의 코드로 이동하여 해결 후 add와 commit
 $ git status
 
-// 상태를 찍으면 충돌난 파일이 보여진다
+# 상태를 찍으면 충돌난 파일이 보여진다
 <<<<<<< HEAD
-// 현재 체크 아웃된 내용
+# 현재 체크 아웃된 내용
 =========
-// 병합하려는 대상인 내용
+# 병합하려는 대상인 내용
 >>>>>>> master
    ```
 
 ### 1.4 branch 삭제하기
 
    ```bash
-// 다른 branch의 내용이 모두 master로 통합되었기에 필요하지가 않다
+# 다른 branch의 내용이 모두 master로 통합되었기에 필요하지가 않다
 $ git branch -d <branch name>
    ```
 
@@ -148,6 +148,7 @@ $ git commit --amend -m "new commit comment"
   $ git commit --amend
   ```
 
+<<<<<<< HEAD
 ## 4. 임시 저장
 
 - 현재 작업 일시 저장 save는 생략 가능
@@ -189,3 +190,32 @@ $ git commit --amend -m "new commit comment"
   ```
 
   
+=======
+### 3.4 git commit 통합하기
+
+- 과거의 commit 통합
+
+  ```bash
+  $ git rebase -i HEAD~~
+  ```
+
+  - 애디터가 열리면 `HEAD` 에서 `HEAD~~`까지의 commit 표시
+
+  - 통합될 commit의 `pick`을 `s`로 바꾸고 저장
+
+    - rebase 실행 후 command option
+
+      ```bash
+      #  p, pick = use commit
+      #  r, reword = use commit, but edit the commit message
+      #  e, edit = use commit, but stop for amending
+      #  s, squash = use commit, but meld into previous commit
+      #  f, fixup = like "squash", but discard this commit's log message
+      #  x, exec = run command (the rest of the line) using shell
+      ```
+
+  - `git log` 로 이력 확인
+
+  
+
+>>>>>>> 7c441998704faf353f609ec0e1324993a625eae5

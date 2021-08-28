@@ -63,7 +63,7 @@
    - git 로컬 저장소(사용자 컴퓨터)에 저장
   
       - 파일 별로 저장하는 방법
-       
+      
         ```bash
         $ git add (파일명)
         ```
@@ -81,6 +81,12 @@
           ```
      
           - commit 명은 날짜|내용으로 하는 것을 추천한다. 예) 191231|Add comment
+          
+          - 이전 commit comment를 수정하려면
+          
+            ```bash
+            $ git commit --amend
+            ```
      
   - github의 원격 저장소에 저장
   
