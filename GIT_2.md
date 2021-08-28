@@ -173,7 +173,6 @@ $ git commit --amend -m "new commit comment"
 
   - `git log` 로 이력 확인
 
-
 ## 4. 임시 저장
 
 - 현재 작업 일시 저장 save는 생략 가능
