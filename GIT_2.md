@@ -148,7 +148,32 @@ $ git commit --amend -m "new commit comment"
   $ git commit --amend
   ```
 
-<<<<<<< HEAD
+### 3.4 git commit 통합하기
+
+- 과거의 commit 통합
+
+  ```bash
+  $ git rebase -i HEAD~~
+  ```
+
+  - 애디터가 열리면 `HEAD` 에서 `HEAD~~`까지의 commit 표시
+
+  - 통합될 commit의 `pick`을 `s`로 바꾸고 저장
+
+    - rebase 실행 후 command option
+
+      ```bash
+      #  p, pick = use commit
+      #  r, reword = use commit, but edit the commit message
+      #  e, edit = use commit, but stop for amending
+      #  s, squash = use commit, but meld into previous commit
+      #  f, fixup = like "squash", but discard this commit's log message
+      #  x, exec = run command (the rest of the line) using shell
+      ```
+
+  - `git log` 로 이력 확인
+
+
 ## 4. 임시 저장
 
 - 현재 작업 일시 저장 save는 생략 가능
@@ -188,34 +213,3 @@ $ git commit --amend -m "new commit comment"
   ```bash
   git stash clear
   ```
-
-  
-=======
-### 3.4 git commit 통합하기
-
-- 과거의 commit 통합
-
-  ```bash
-  $ git rebase -i HEAD~~
-  ```
-
-  - 애디터가 열리면 `HEAD` 에서 `HEAD~~`까지의 commit 표시
-
-  - 통합될 commit의 `pick`을 `s`로 바꾸고 저장
-
-    - rebase 실행 후 command option
-
-      ```bash
-      #  p, pick = use commit
-      #  r, reword = use commit, but edit the commit message
-      #  e, edit = use commit, but stop for amending
-      #  s, squash = use commit, but meld into previous commit
-      #  f, fixup = like "squash", but discard this commit's log message
-      #  x, exec = run command (the rest of the line) using shell
-      ```
-
-  - `git log` 로 이력 확인
-
-  
-
->>>>>>> 7c441998704faf353f609ec0e1324993a625eae5
