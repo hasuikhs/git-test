@@ -178,13 +178,14 @@ $ git commit --amend -m "new commit comment"
 - 현재 작업 일시 저장 save는 생략 가능
 
   ```bash
-  $ git stash save
+  $ git stash save [<message>]
   ```
 
 - 일시 저장 목록 확인
 
   ```bash
   $ git stash list
+  stash@{0}: On master: test # 위에서 save할때 message를 test로 했을 때
   ```
 
 - 일시 저장 작업 불러오기
@@ -192,19 +193,19 @@ $ git commit --amend -m "new commit comment"
   - stash 리스트에서 삭제하면서 가져오기
 
     ```bash
-    $ git stash pop
+    $ git stash pop [stash@{<index>}]
     ```
 
   - statsh 리스트에서 삭제하지 않고 가져오기
 
     ```bash
-    $ git stash apply
+    $ git stash apply [stash@{<index>}]
     ```
 
 - 일시 저장 작업해둔 작업 삭제
 
   ```bash
-  $ git stash drop
+  $ git stash drop [stash@{<index>}]
   ```
 
 - 일시 저장 작업 모두 삭제

@@ -5,3 +5,5 @@ git rebase test2
 git rebase test3
 
 git rebase test4
+
+git stash
