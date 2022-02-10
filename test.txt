@@ -6,4 +6,4 @@ git rebase test3
 
 git rebase test4
 
-git test
+git commit tests
