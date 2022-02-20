@@ -47,6 +47,33 @@ $ git status
 $ git branch -d <branch name>
    ```
 
+### 1.5 원격 브랜치 가져오기
+
+- 먼저 깃을 업데이트
+
+  ```bash
+  $ git remote update
+  ```
+
+- 브랜치 리스트 확인
+
+  ```bash
+  # 원격 저장소 브랜치 리스트 보기
+  $ git branch -r
+  
+  # 로컬, 원격 모든 브랜치 리스트 보기
+  $ git branch -a
+  ```
+
+- 원격 저장소 브랜치 가져오기
+
+  ```bash
+  # -t 로컬에 동일한 이름의 브랜치를 생성하면서 해당 브랜치로 체크아웃
+  $ git checkout -t origin/[원격저장소 브랜치명]
+  
+  # -b 브랜치 이름을 변경하여 가져오기
+  $ git checkout -b [생성할 브랜치명] [원격저장소 브랜치명]
+  ```
 
 ## 2. 기타 명령어
 
@@ -211,5 +238,27 @@ $ git commit --amend -m "new commit comment"
 - 일시 저장 작업 모두 삭제
 
   ```bash
-  git stash clear
+  $ git stash clear
   ```
+
+## 5. 이전 커밋 돌아가기
+
+- 커밋된 버전들 확인
+
+  ```bash
+  $ git log
+  ```
+
+- 확인된 커밋의 4자리 이상의 해시코드로 돌아가기
+
+  ```bash
+  $ git checkout [hash_code]
+  ```
+
+- 다시 브랜치로 돌아오기
+
+  ```bash
+  $ git checkout [branch]
+  ```
+
+  
