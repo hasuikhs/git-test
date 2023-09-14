@@ -9,3 +9,5 @@ git rebase test4
 git commit tests
 
 git flow test
+
+git release test
