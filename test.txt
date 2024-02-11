@@ -11,3 +11,5 @@ git commit tests
 git flow test
 
 git release test
+
+git tag test
